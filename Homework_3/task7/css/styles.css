@@ -1,0 +1,43 @@
+.top_navigation {
+  width: 100%;
+  background-color: #777;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.top_navigation li {
+  float: left;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+.active {
+ background-color: #4caf50;
+}
+.sidemenu {
+  float: right;
+  border: 1px solid blue;
+  width: 25%;
+  padding: 5px;
+}
+.content {
+  float: left;
+  border: 1px solid blue;
+  width: 75%;
+  padding: 5px;
+}
+.heading h1 {
+  text-align: center;
+  background-color: #2196F3;
+  color: white;
+  border: 1px solid blue;
+}
+.footer {
+  width: 100%;
+  background-color: #444;
+  padding: 5px;
+}

@@ -1,0 +1,90 @@
+/* Общие правила */
+
+@font-face {
+  font-family: 'Economica-Bold';
+  src: url('../fonts/Economica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Economica-Bold', sans-serif;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 900px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.page-header {
+  background-color: #1aa4ff;
+  width: 100%;
+}
+
+/* Header-menu */
+
+.page-header-menu-item {
+  display: inline-block;
+}
+
+.page-header-menu-item-link {
+  display:block;
+  padding: 5px 5px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -1px
+}
+
+.page-header-menu {
+  text-align: center;
+  padding: 0;
+}
+
+/* Header-bar */
+
+.page-header-bar-wrapper {
+  display: none;
+  background-color: #eeeeee;
+}
+
+.page-header-bar-item {
+  display: inline-block;
+}
+
+.page-header-bar-item-link {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #a0a0a0;
+}
+
+.page-header-menu-item:hover .page-header-bar-wrapper {
+  display: block;
+  width: 900px;
+  left: 0;
+  right: 0;
+}
+
+.page-header-menu-item:hover .page-header-menu-item-link {
+  background-color: #eeeeee;
+  color: #a0a0a0;
+}
+
+.outer {
+  position: relative;
+}
+
+.inner{
+  position: absolute;
+  top: 100%;

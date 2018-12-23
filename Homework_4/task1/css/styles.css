@@ -1,0 +1,47 @@
+/* Общие правила */
+
+@font-face {
+  font-family: 'Economica-Bold';
+  src: url('../fonts/Economica-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Economica-Bold', sans-serif;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+/* Header-menu */
+
+.page-header {
+  background-color: #a64dff; 
+}
+
+.page-header-menu-item {
+  display: inline-block; 
+}
+ .page-header-menu-item-link {
+   display:block;
+   padding: 5px 15px;
+   text-decoration: none;
+   color: #ffffff;
+   text-transform: uppercase;
+}
+
+.active {
+  background-color: #eeeeee;
+  color: #a0a0a0;
+}

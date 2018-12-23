@@ -1,0 +1,55 @@
+body {
+  box-sizing: border-box;
+  width: 850px; 
+}
+h1 {
+  text-align: right;
+  font: bold;
+  color:orange;
+  padding: 30px 200px 0px 0px;
+} 
+p {
+  text-align: left; 
+  font-weight: normal; 
+  padding: 0px 200px 0px 50px;
+}
+div {
+  padding: 0px 200px 0px 50px;
+}
+p::first-letter {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 200%;
+  color: red;
+}
+p em {
+  background-color: green;
+  color: aliceblue;
+}
+#allotment h2 {
+  text-align: left;
+  font: bold 30px;
+  color:orange;
+}
+#warehouse h2 {
+  text-align: left;
+  font: bold 30px;
+  color:blue;
+}
+ul li {
+  font-weight: bold;
+}
+ol li {
+  font-weight: normal;
+}
+#allotment ol.fruits-list li {
+  color: grey;
+}
+#allotment ol.vegetables-list li {
+  color: red;
+}
+#warehouse ol.fruits-list li {
+  color: green;
+}
+#warehouse ol.vegetables-list li {
+  color: red;
+}

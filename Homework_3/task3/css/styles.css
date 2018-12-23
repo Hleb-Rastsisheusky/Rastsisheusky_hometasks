@@ -1,0 +1,20 @@
+/* Styles */
+div {
+    font-size: 30px;
+  }
+  a[href^="/"] {
+    color: blue;
+  }
+  a[href*="ya"] {
+    color: #f70
+  }
+  a[href*="google"] {
+    color: #566
+  }
+  /* UTF */
+  a[target="_blank"]::after {
+    content:"\21F1";
+    display: inline-block;
+    transform: rotate(90deg);
+  }
+  

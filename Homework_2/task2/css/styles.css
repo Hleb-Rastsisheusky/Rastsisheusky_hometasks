@@ -1,0 +1,12 @@
+.photo1 {
+    display: block;
+    margin: 0 auto;    
+}
+.photo3 {
+    float: left;
+    margin-right: 20px;
+}
+.photo4 {
+    float: right;
+    margin-left: 20px;
+}
