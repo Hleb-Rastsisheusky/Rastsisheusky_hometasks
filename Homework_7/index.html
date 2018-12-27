@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Economica:700" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main class="main-content">
+        <div class="main-picture">
+            <a class="main-picture-link" href="#form">
+               <img class="main-picture-image" src="./images/fast-mail.png" alt="">
+            </a>
+        </div>
+        <div class="form-wrapper">
+            <form id="form" class="main-form container">
+                <label class="main-form-name">
+                    <input class="main-form-name-content" type="text" placeholder="Enter your name" >
+                    <svg class="main-form-name-content-svg-client" aria-hidden="true" data-prefix="fas" data-icon="user-alt" class="svg-inline--fa fa-user-alt fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 288c79.5 0 144-64.5 144-144S335.5 0 256 0 112 64.5 112 144s64.5 144 144 144zm128 32h-55.1c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16H128C57.3 320 0 377.3 0 448v16c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48v-16c0-70.7-57.3-128-128-128z"></path></svg>
+                    <div class="invisible-name">
+                        <img class="invisible-name-image" src="./images/mail.svg" alt="">
+                    </div>
+                </label>
+                <label class='main-form-password'>
+                    <input class="main-form-password-content" type="password" placeholder="Password" >
+                    <svg class="main-form-password-content-svg-password" aria-hidden="true" data-prefix="fas" data-icon="lock" class="svg-inline--fa fa-lock fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg>
+                    <div class="invisible-password">
+                        <img class="invisible-password-image" src="./images/lock.png" alt="">
+                    </div>
+                </label>
+                <div class="main-form-radio">
+                    <p>Sex</p>
+                    <label class="main-form-radio-content">
+                        <input type="radio" name="gender" value="male"><span class="main-form-radio-content-text">Male</span>
+                    </label>
+                    <label class="main-form-radio-content">
+                        <input type="radio" name="gender" value="female"><span class="main-form-radio-content-text">Female</span>
+                    </label>
+                </div>
+                <div class="main-form-checkbox">
+                    <p>Current status</p>
+                    <div class="main-form-checkbox-content">
+                        <label class="main-form-checkbox-content-label">
+                            <input type="checkbox" name="vehicle" value="Student">
+                            <div class="main-form-checkbox-content-wrapper">
+                                <div class="main-form-checkbox-content-toggler"></div>
+                                <span class="main-form-checkbox-content-text">Student</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="main-form-checkbox-content">
+                        <label class="main-form-checkbox-content-label">
+                            <input type="checkbox" name="vehicle" value="Student">
+                            <div class="main-form-checkbox-content-wrapper">
+                                <div class="main-form-checkbox-content-toggler"></div>
+                                <span class="main-form-checkbox-content-text">Employed</span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="main-form-checkbox-content">
+                        <label class="main-form-checkbox-content-label">
+                            <input type="checkbox" name="vehicle" value="Student">
+                            <div class="main-form-checkbox-content-wrapper" >
+                                <div class="main-form-checkbox-content-toggler"></div>
+                                <span class="main-form-checkbox-content-text">Unemployed</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <div class="main-form-birthday">
+                    <p class="main-form-birthday-content">Month and Year of birth</p>
+                    <select class="birthday-section" name="month"> 
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">Audi</option>
+                    </select>
+                    <select class="birthday-section" name="year"> 
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                    </select>
+                </div>
+                <div class="main-form-skills">
+                    <p class="main-form-skills-content">Skills and Technologies</p>
+                    <select class="skills-section" name="skills-technologies" multiple="true" size="10">
+                        <optgroup label="Tech skills">
+                        <option value="html">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="git">git</option>
+                        <optgroup label="Soft skills">
+                        <option value="time-management">Time management</option>
+                        <option value="proactivity">Proactivity</option>
+                        <option value="teamwork">Teamwork</option>
+                        <option value="leadership">Leadership</option>
+                    </select>
+                </div>
+                <div class="photo-download-wrapper">
+                    <button class="photo-download-button">Add photo</button>
+                    <input class="photo-download-input" type="file" name="photo" multiple accept="image/*,image/jpeg">
+                </div>
+                <div class="comments-wrapper">
+                    <p class="comments-content"> Comments </p>
+                    <textarea  rows="5" cols="30" name="text"></textarea>
+                </div>
+                <button class="comments-content-button"><a class="main-form-button-login-link" href="#">Save</a></button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
