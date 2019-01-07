@@ -5,7 +5,7 @@
 }
 
 .container {
-  padding: 20px;
+  padding: 3px 20px 20px 20px;
 }
 
 body {
@@ -49,6 +49,15 @@ body {
 
 /* Name and Password */
 
+.close {
+text-align: right;
+display: block;
+font-size: 14px;
+line-height: 1;
+padding-bottom: 3px;
+text-decoration: none;
+color: #a8b0bb;
+}
 
 .main-picture-image {
   max-width: 15%;
@@ -371,7 +380,6 @@ input::-webkit-input-placeholder {
 .photo-download-wrapper {
   position: relative;
   display: inline-block;
-  padding: 10px;
   border: 1px solid transparent;
 }
 
@@ -389,7 +397,9 @@ input::-webkit-input-placeholder {
   font-size: 35px;
   position: absolute;
   left: 0;
-  top: 7px;
+  top: 0x;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   display: block;
   width: 100%;
@@ -404,7 +414,9 @@ input::-webkit-input-placeholder {
 }
 
 .comments-wrapper textarea {
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 /* Button save */
