@@ -1,0 +1,15 @@
+
+.testimonial__comment::before {
+    content: '\201C';
+    display: inline-block;
+    
+}
+
+.testimonial__comment::after {
+    content: '\201C';
+    display: inline-block;
+    transform: scale(1, -1);  
+    position: relative; 
+}
+
+
