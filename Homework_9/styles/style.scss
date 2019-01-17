@@ -1,0 +1,97 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
+html {
+    font-size: $main_size;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-size: $open-sans;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.link {
+    text-decoration: none;
+}
+
+
+// Page header 
+
+
+.logo {
+    width: 50px;
+    height: 48px;
+    background-image: url(../image/logo.png);
+}
+
+.page-header {
+    background-color:$main_color_white;
+
+    &__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    }
+
+    &__logo{
+        margin: 22px 0;
+    }
+    
+}
+
+.nav-menu {
+    $self: &;
+
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+
+    &_header {
+       #{$self} {
+           &__link:hover {
+               color: $main_color_white;
+               background-color: $main_color_orange;
+           }
+       }
+    }
+
+    &__item {
+        display: inline-flex;
+    }
+
+    &__link {
+        font: {
+            family: $lato;
+            size: get_rem(10px);
+        }
+        line-height: 1;
+        border-radius: 3px;
+        padding: 12px 25px;
+        color: $main_color_gray;
+        text-transform: uppercase;
+
+    }
+}
+
+
+// Boost
+
+
+
+
+
+

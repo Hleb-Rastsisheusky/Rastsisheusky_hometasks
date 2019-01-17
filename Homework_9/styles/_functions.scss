@@ -1,0 +1,9 @@
+@function get_vw_size ($size) {
+    $screen: 1680;
+
+    @return ($size / $screen) * 100vw;
+}
+
+@function get_rem ($px_size) {
+    @return ($px_size / $main_size) + rem;
+}
