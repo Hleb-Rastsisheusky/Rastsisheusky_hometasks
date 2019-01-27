@@ -17,44 +17,28 @@
             <nav class="nav">
                 <ul class="nav-menu nav-menu_header" id="mynav-list">
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Home
-                        </a>
+                        <a href="#" class="nav-menu__link link">Home</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Service
-                        </a>
+                        <a href="#" class="nav-menu__link link">Service</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            About us
-                        </a>
+                        <a href="#" class="nav-menu__link link">About us</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Pricing table
-                        </a>
+                        <a href="#" class="nav-menu__link link">Pricing table</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            How it work
-                        </a>
+                        <a href="#" class="nav-menu__link link">How it work</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Happy work
-                        </a>
+                        <a href="#" class="nav-menu__link link">Happy work</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Happy client
-                        </a>
+                        <a href="#" class="nav-menu__link link">Happy client</a>
                     </li>
                     <li class="nav-menu__item">
-                        <a href="#" class="nav-menu__link link">
-                            Contact us
-                        </a>
+                        <a href="#" class="nav-menu__link link">Contact us</a>
                     </li>
                 </ul>
             </nav>
@@ -64,202 +48,243 @@
         <section class="request">
             <div class="request__wrapper  container">
                 <div class="request__heading">
-                    <div class="heading heading_white">
+                    <div class="heading heading_white heading_main">
                         <div class="heading__title">Boost up your Local business</div>
                         <div class="heading__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum typesetting</div>
                     </div>
                 </div>
-                <div class="request__form" action="#" method="POST"> 
-                    <form class="form">
-                        <div class="form__item">
-                            <i class="fa fa-user form__icon icon" aria-hidden="true"></i>
-                            <input class="form__input input" type="text" placeholder="Full Name">
+                <div class="request__form"> 
+                    <form class="form" action="#" method="POST">
+                        <div class="form__wrapper">
+                            <div class="form__item">
+                                <input class="form__input input" type="text" placeholder="Full Name">
+                                <svg class="form__icon icon">
+                                    <use xlink:href="svg/sprite.svg#user"/>
+                                </svg>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input input" type="email" placeholder="Email Address">
+                                <svg class="form__icon icon">
+                                    <use xlink:href="svg/sprite.svg#mail"/>
+                                </svg>
+                            </div>
+                            <div class="form__item">
+                                <input class="form__input input" type="tel" pattern="^[0-9]+$" placeholder="Phone Number">
+                                <svg class="form__icon icon">
+                                    <use xlink:href="svg/sprite.svg#phone"/>
+                                </svg>
+                            </div>
+                            <div class="form__item form__item_lite">
+                                <input class="form__input form__input_submit" type="submit" value="Request a Quote"> 
+                            </div>
                         </div>
-                        <div class="form__item">
-                            <i class="fa fa-envelope form__icon icon" aria-hidden="true"></i>
-                            <input class="form__input input" type="email" placeholder="Email Address">
-                        </div>
-                        <div class="form__item">
-                            <i class="fa fa-phone form__icon icon" aria-hidden="true"></i>
-                            <input class="form__input input" type="tel" pattern="^[0-9]+$" placeholder="Phone Number">
-                        </div>
-                        <button class="form__button button">
-                            <a class="form__link link" href="#">Request a quote</a>
-                        </button>
                     </form>
                 </div>
-                <div class="slider">
-                    <div class="slider__container">
-                        <input type="radio" id="i1" name="images" checked />
-                        <input type="radio" id="i2" name="images" />
-                        <input type="radio" id="i3" name="images" />	
-                        <div class="slide_img" id="one">			  
-                            <img src="./image/slide1.jpg" alt="slide1">
-                            <label class="prev" for="i3"><span>&#x2039;</span></label>
-                            <label class="next" for="i2"><span>&#x203a;</span></label>
+                <div class="request__slider">
+                    <div class="slider">
+                        <div class="slider__container">
+                            <input class="slider__input" type="radio" id="i1" name="images" checked/>
+                            <input class="slider__input" type="radio" id="i2" name="images" />
+                            <input class="slider__input" type="radio" id="i3" name="images" />
+                            <div class="slider__item" id="one">			
+                                <img class="slider__image" src="./image/slide1.jpg">
+                                <label class="slider__direction slider__direction_left" for="i3">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#back"/>
+                                    </svg>
+                                </label>
+                                <label class="slider__direction slider__direction_right" for="i2">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#next"/>
+                                    </svg>
+                                </label>	
+                            </div>
+                            <div class="slider__item" id="two">			
+                                <img class="slider__image" src="./image/slide2.jpg">
+                                <label class="slider__direction slider__direction_left" for="i1">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#back"/>
+                                    </svg>
+                                </label>
+                                <label class="slider__direction slider__direction_right" for="i3">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#next"/>
+                                    </svg>
+                                </label>	
+                            </div>
+                            <div class="slider__item" id="three">			
+                                <img class="slider__image" src="./image/slide3.jpg">
+                                <label class="slider__direction slider__direction_left" for="i2">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#back"/>
+                                    </svg>
+                                </label>
+                                <label class="slider__direction slider__direction_right" for="i1">
+                                    <svg class="slider__direction-icon icon">
+                                        <use xlink:href="svg/slider.svg#next"/>
+                                    </svg>
+                                </label>	
+                            </div>
+                            <div class="slider__nav">
+                                <label for="i1" class="slider__nav-dots" id="dot1"></label>
+                                <label for="i2" class="slider__nav-dots" id="dot2"></label>
+                                <label for="i3" class="slider__nav-dots" id="dot3"></label>
+                            </div>
                         </div>
-                        <div class="slide_img" id="two">
-                            <img src="./image/slide2.jpg" alt="slide2">
-                            <label class="prev" for="i1"><span>&#x2039;</span></label>
-                            <label class="next" for="i3"><span>&#x203a;</span></label>
-                        </div>       
-                        <div class="slide_img" id="three">
-                            <img src="./image/slide3.jpg" alt="slide3">	  
-                            <label class="prev" for="i2"><span>&#x2039;</span></label>
-                            <label class="next" for="i1"><span>&#x203a;</span></label>
-                        </div>
-                        <div id="nav_slide">
-                            <label for="i1" class="dots" id="dot1"></label>
-                            <label for="i2" class="dots" id="dot2"></label>
-                            <label for="i3" class="dots" id="dot3"></label>
-                        </div>    
                     </div>
                 </div>
             </div>
         </section>
-        <section class="service">
-            <div class="service__wrapper container">
-                <div class="service__heading">
+        <section class="services">
+            <div class="services__wrapper container">
+                <div class="services__heading">
                     <div class="heading">
                         <div class="heading__title">Our Services</div>
                         <div class="heading__subtitle">Lorem Ipsum is simply dummy Business industry.</div>
                     </div>
                 </div>
-                <div class="service-table">
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Font-Awesome Icons</div>
-                            <div class="service-table-box__text">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+                <div class="services__box">
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#clock"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Font-Awesome Icons</div>
+                            <div class="service__description">Lorem Ipsum is simply dummy text of the printing and typesetting ind
+                                ustry. Lorem Ipsum has been the industry's standard dummy text ever 
+                                since the 1500s, when an unknown printer.
                             </div>
-                        </div>
-                    </div>
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-cog" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Fully Responsive Design</div>
-                            <div class="service-table-box__text">
-                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        </main>
+                    </article>
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#cog"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Fully Responsive Design</div>
+                            <div class="service__description">Many desktop publishing packages and web page editors now use Lorem 
+                                Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites 
+                                still in their infancy.
                             </div>
-                        </div>
-                    </div>   
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Working Contact form</div>
-                            <div class="service-table-box__text">
-                                Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                        </main>
+                    </article>
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#graduation"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Working Contact form</div>
+                            <div class="service__description">Many desktop publishing packages and web page editors now use Lorem 
+                                Ipsum as their default model text, and a search for 'lorem ipsum' will un
+                                cover many web sites still in their infancy.
                             </div>
-                        </div>
-                    </div> 
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-rocket" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Retina Ready icons here</div>
-                            <div class="service-table-box__text">
-                                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humouror randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.
+                        </main>
+                    </article>
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#rocket"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Retina Ready icons here</div>
+                            <div class="service__description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+                                or randomised words which don't look even slightly believable.
+                                If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
                             </div>
-                        </div>
-                    </div> 
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-renren" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Friendly Code</div>
-                            <div class="service-table-box__text">
-                                Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        </main>
+                    </article>
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#logo"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Friendly Code</div>
+                            <div class="service__description">Finibus Bonorum et Malorum" by Cicero are also reproduced in their 
+                                exact original form, accompanied by English versions from the 1914 translation by H. Rackham
                             </div>
-                        </div>
-                    </div>
-                    <div class="service-table-box">
-                        <div class="service-table-box__icon">
-                            <i class="fa fa-usd" aria-hidden="true"></i>
-                        </div>
-                        <div class="service-table-box__content">
-                            <div class="service-table-box__title">Flat trendy landing page Design</div>
-                            <div class="service-table-box__text">
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+                        </main>
+                    </article>
+                    <article class="services__box-item service">
+                        <svg class="service__icon icon icon_l">
+                            <use xlink:href="svg/sprite.svg#money"/>
+                        </svg>
+                        <main class="service__content">
+                            <div class="service__heading">Flat trendy landing page Design</div>
+                            <div class="service__description">Lorem Ipsum is simply dummy text of the printing and typesetting 
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since 
+                                the 1500s, when an unknown printer.
                             </div>
-                        </div>
-                    </div>                
+                        </main>
+                    </article>
                 </div>
             </div>
         </section>
-        <section class="about-us">
-            <div class="about-us__elem">
-                <img class="about-us__image" src="./image/Layer_27.png" alt="workplace">
-            </div>
-            <div class="about-us__elem">
-                <div class="about-us__heading">
-                    <div class="heading heading_white heading_align_left">
-                        <div class="heading__title">ABout us</div>
-                        <div class="heading__subtitle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the ore recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. 
-                    </div>        
-                </div>          
-            </div>
-            <div class="about-us__button"><a href="#">Read more</a></div>
+        <section class="about-us ">
+            <div class="about-us__image"></div>
+            <div class="about-us__heading container">
+                <div class="heading heading_white heading_align_left">
+                    <div class="heading__title">ABout us</div>
+                </div>             
+                <div class="about-us__text ">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the ore recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>    
+                <a class="about-us__link" href="#"><div class="about-us__button button">Read more</div></a>
+            </div> 
         </section>
-        <section class="price ">
-            <div class="price__wrapper container">
-                <div class="price__heading">
-                    <div class="heading">
+        <section class="cards ">
+            <div class="cards__wrapper container">
+                <div class="cards__heading">
+                    <div class="heading heading_cards">
                         <div class="heading__title">Choose your price</div>
                         <div class="heading__subtitle">Lorem Ipsum is simply dummy text of the printing typesetting.</div>
                     </div>
                 </div>
-                <div class="cards">
-                    <div class="card">
+                <div class="cards__container">
+                    <article class="cards__item card">
                         <div class="card__wrapper">
-                            <div class="card__header">Basic plan</div>
-                            <div class="card__price"><sup class="card__price-currency">$</sup>22</div>
-                            <ul class="card__list">
-                                <li class="card__item">1 account</li>
-                                <li class="card__item">8 hours support</li>
-                                <li class="card__item">customs cloud services</li>
-                            </ul>
-                            <button class="card__button button">
-                                <a href="#" class="card__link link">get started</a>
-                            </button>
+                            <div class="card__heading">Basic plan</div>
+                            <div class="card__price">
+                                <div class="card__price-currency">$</div>
+                                <div class="card__price-value">22</div>
+                                <div class="card__price-monthly">per month</div>
+                            </div>
+                            <div class="card__list">
+                                <div class="card__list-item">1 account</div>
+                                <div class="card__list-item">8 hours support</div>
+                                <div class="card__list-item">Customs cloud services</div>
+                            </div>
+                            <a href="#"><div class="card__button button">Get Started</div></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="cards__item card">
                         <div class="card__wrapper">
-                            <div class="card__header">Premium plan</div>
-                            <div class="card__price"><sup class="card__price-currency">$</sup>42</div>
-                            <ul class="card__list">
-                                <li class="card__item">2 account</li>
-                                <li class="card__item">100 mb storage</li>
-                                <li class="card__item">customs cloud services</li>
-                            </ul>
-                            <button class="card__button button">
-                                <a href="#" class="card__link link">get started</a>
-                            </button>
+                            <div class="card__heading">Get Started</div>
+                            <div class="card__price">
+                                <div class="card__price-currency">$</div>
+                                <div class="card__price-value">42</div>
+                                <div class="card__price-monthly">per month</div>
+                            </div>
+                            <div class="card__list">
+                                <div class="card__list-item">2 account</div>
+                                <div class="card__list-item">100Mmb storage</div>
+                                <div class="card__list-item">Customs cloud services</div>
+                            </div>
+                            <a href="#"><div class="card__button button">Get Started</div></a>
                         </div>
-                    </div>
-                    <div class="card">
+                    </article>
+                    <article class="cards__item card">
                         <div class="card__wrapper">
-                            <div class="card__header">Gold plan</div>
-                            <div class="card__price"><sup class="card__price-currency">$</sup>62</div>
-                            <ul class="card__list">
-                                <li class="card__item">8 account</li>
-                                <li class="card__item">24 hours support</li>
-                                <li class="card__item">customs cloud services</li>
-                            </ul>
-                            <button class="card__button button">
-                                <a href="#" class="card__link link">get started</a>
-                            </button>
+                            <div class="card__heading">Gold plan</div>
+                            <div class="card__price">
+                                <div class="card__price-currency">$</div>
+                                <div class="card__price-value">62</div>
+                                <div class="card__price-monthly">per month</div>
+                            </div>
+                            <div class="card__list">
+                                <div class="card__list-item">8 account</div>
+                                <div class="card__list-item">24 hours support</div>
+                                <div class="card__list-item">Customs cloud services</div>
+                            </div>
+                            <a href="#"><div class="card__button button">Get Started</div></a>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -473,6 +498,9 @@
     </footer>
 </body>
 </html>
+
+
+
 
 
 

@@ -2,14 +2,14 @@
     $behaviour: max-width;
     $screen-width: $width;
 
-    @if ($diff=='less') {
+    @if ($diff  ==  'less') {
         $screen-width: $width - 1px;
     }
-    @if ($diff=='self above') {
+    @if ($diff == 'self above') {
         $behaviour: min-width;
     }
 
-    @media screen and (#{behaviour} : $screen-width) {
+    @media screen and (#{$behaviour} : $screen-width) {
         @content;
     }
 }
