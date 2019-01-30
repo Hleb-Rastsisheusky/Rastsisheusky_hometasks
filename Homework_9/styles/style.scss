@@ -211,6 +211,16 @@ body {
             weight: 300;
         }
     }
+
+    &_mechanism {
+        #{$self}__subtitle {
+            font: {
+                family: $lato_light;
+                size: get_rem(16px);
+                weight: 300;
+            }
+        }
+    }
 }
 
 .form {
@@ -478,7 +488,7 @@ body {
 
     &__description {
         font: 11px/18px $lato;
-        color: $service_gray_description_color;
+        color: $gray_description_color;
     }
 
     @include scale(768) {
@@ -572,7 +582,7 @@ body {
     }
 
     &__heading {
-        margin-bottom: 49px;
+        margin-bottom: get_vw_size(79);
     }
 
     &__container {
@@ -584,23 +594,38 @@ body {
         flex-grow: 1;
         flex-shrink: 1;
     }
+
+    @include scale(525) {
+        &__container {
+            flex-direction: column;
+            align-items: stretch;
+        }
+
+        &__item {
+            margin-top: 20px;
+        }
+
+        &__wrapper {
+            padding-bottom: get_vw_size(150);
+        }
+    }
 }
 
 .card {
     $self: &;
 
-    position: relative;
-    z-index: 1;
-    background: $main_color_white;
-    text-align: center;
-    border: 1px solid $section_cards_border_color;
-    border-radius: 4px;
-    padding: get_vw_size(57) get_vw_size(31) get_vw_size(48);
+    padding: get_vw_size(30) 0;
 
-    :hover {
-        transition: all 200ms ease-in;
-        transform: scale(1.1);
-        background: $main_color_blue;
+    
+
+    &__wrapper {
+        position: relative;
+        z-index: 1;
+        background: $main_color_white;
+        text-align: center;
+        border: 1px solid $section_cards_border_color;
+        border-radius: 4px;
+        padding: get_vw_size(57) get_vw_size(31) get_vw_size(48);
     }
 
     &__heading {
@@ -650,8 +675,194 @@ body {
             text-transform: uppercase;
         }
     }
+
+
+    &:hover {
+
+        padding:0;
+
+        #{$self}__wrapper{
+            transition: all 200ms ease-in;
+            background: $main_color_blue;
+            z-index: 2;
+            padding: get_vw_size(87) get_vw_size(31) get_vw_size(78);
+        }
+
+        
+        #{$self}__heading,
+        #{$self}__price-currency,
+        #{$self}__price-value,
+        #{$self}__price-monthly {
+            color: $main_color_white;
+        }
+
+        #{$self}__list-item {
+            color:$card_hover_list-item_color;
+            border-color: $card_hover_border_color;
+        }
+
+    }
+
+    @include scale(525) {
+        &:hover {
+            padding: 0;
+    
+            #{$self}__wrapper{
+                transition: all 0ms ease-in;
+                padding: get_vw_size(87) get_vw_size(31) get_vw_size(78);
+            }
+        }
+    }
 }
 
+
+// Mechanism
+
+
+.mechanism {
+    &__wrapper {
+        padding-top: get_vw_size(155);
+        padding-bottom: get_vw_size(149);
+    } 
+
+    &__heading {
+        padding-bottom: get_vw_size(72);
+    }
+
+    &__link {
+        display:block;
+        text-align: center;
+    }
+
+    &__button {
+        padding: 17px 27px;
+    }
+}
+
+.steps {
+    &__box {
+        display: flex;
+        align-items: center;
+        padding-bottom: get_vw_size(91);
+    }
+}
+
+.step {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &:not(:first-child):not(:last-child) {
+        padding-left: 44px;
+        padding-right: 44px;
+    }
+
+    &:first-child {
+        padding-left: 28px;
+        padding-right: 44px;
+    }
+
+    &:last-child {
+        padding-left: 44px;
+        padding-right: 28px;
+    }
+
+    &__icon {
+        fill: $main_color_blue;
+        margin: get_vw_size(40) get_vw_size(75) get_vw_size(102);
+    }
+
+    &__heading {
+        text-align: center;
+        padding-bottom: 28px;
+        font: 20px/1 $lato-bold;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font: 13px/22px $open-sans;
+        color: $gray_description_color;
+        text-align: center;
+    }
+}
+
+.top-arrow {
+    &:after {
+        content: url(./../image/arrow_1.png);
+        position: absolute;
+        right: -50%;
+        transform: translateX(-60%);
+        display: block;
+    }
+}
+
+.bottom-arrow {
+    &:after {
+        content: url(./../image/arrow_2.png);
+        position: absolute;
+        bottom:50%;
+        right: -50%;
+        transform: translateX(-60%);
+        
+    }
+}
+
+
+// Testimonials 
+
+
+.testimonials {
+    background-color: $main_color_orange;
+
+    &__wrapper{
+        padding-top: get_vw_size(141);
+        padding-bottom: get_vw_size(160);
+    }
+
+    &__heading {
+        padding-bottom: get_vw_size(58);
+    }
+
+    &__box{
+        display: flex;
+        flex-wrap: wrap;
+
+        :nth-child(n+3) {
+            margin-top: 20px;
+        }
+        :nth-child(2n-1) {
+            margin-right: 20px;
+        }
+    
+        :nth-child(2n) {
+            margin-left: 20px;
+        }
+
+        &-item {
+            max-width: 48%;
+        }
+    }
+}
+
+.testimonial {
+    position: relative;
+    padding: get_vw_size(43) get_vw_size(43) get_vw_size(51) 182px;
+    background-color: $main_color_white;
+
+    &__avatar {
+        position: absolute;
+        top:get_vw_size(43);
+        left:30px;
+    }
+
+    &__comment {
+        font: 13px/22px $open-sans;
+        color: $gray_description_color;
+        padding-bottom: 29px;
+    }
+    
+}
 
 
 
