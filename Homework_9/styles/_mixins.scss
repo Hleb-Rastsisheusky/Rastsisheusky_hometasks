@@ -1,6 +1,6 @@
-@mixin  scale ($width, $diff:'less') {
+@mixin  scale($width, $diff: 'less') {
     $behaviour: max-width;
-    $screen-width: $width;
+    $screen-width: $width * 1px;
 
     @if ($diff  ==  'less') {
         $screen-width: $width - 1px;
@@ -9,7 +9,7 @@
         $behaviour: min-width;
     }
 
-    @media screen and (#{$behaviour} : $screen-width) {
+    @media screen and (#{$behaviour} : #{$screen-width}) {
         @content;
     }
 }

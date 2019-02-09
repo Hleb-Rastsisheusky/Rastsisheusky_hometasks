@@ -52,28 +52,26 @@
                 </div>
                 <div class="request__form"> 
                     <form class="form" action="#" method="POST">
-                        <div class="form__wrapper">
-                            <div class="form__item">
-                                <input class="form__input input" type="text" placeholder="Full Name">
-                                <svg class="form__icon icon">
-                                    <use xlink:href="svg/sprite.svg#user"/>
-                                </svg>
-                            </div>
-                            <div class="form__item">
-                                <input class="form__input input" type="email" placeholder="Email Address">
-                                <svg class="form__icon icon">
-                                    <use xlink:href="svg/sprite.svg#mail"/>
-                                </svg>
-                            </div>
-                            <div class="form__item">
-                                <input class="form__input input" type="tel" pattern="^[0-9]+$" placeholder="Phone Number">
-                                <svg class="form__icon icon">
-                                    <use xlink:href="svg/sprite.svg#phone"/>
-                                </svg>
-                            </div>
-                            <div class="form__item form__item_lite">
-                                <input class="form__input form__input_submit" type="submit" value="Request a Quote"> 
-                            </div>
+                        <div class="form__item input">
+                            <input class="input__field" type="text" placeholder="Full Name">
+                            <svg class="input__icon icon">
+                                <use xlink:href="svg/sprite.svg#user"/>
+                            </svg>
+                        </div>
+                        <div class="form__item input">
+                            <input class="input__field" type="email" placeholder="Email Address">
+                            <svg class="input__icon icon">
+                                <use xlink:href="svg/sprite.svg#mail"/>
+                            </svg>
+                        </div>
+                        <div class="form__item input">
+                            <input class="input__field" type="tel" pattern="^[0-9]+$" placeholder="Phone Number">
+                            <svg class="input__icon icon">
+                                <use xlink:href="svg/sprite.svg#phone"/>
+                            </svg>
+                        </div>
+                        <div class="form__item input ">
+                            <input class="input__field input__field_submit" type="submit" value="Request a Quote"> 
                         </div>
                     </form>
                 </div>
@@ -412,27 +410,23 @@
                         <div class="heading__subtitle">Lorem Ipsum is simply dummy Business industry</div>
                     </div>
                 </div>
-                <div class="newsletter__form">
-                    <form class="form form_down" action="#" method="POST">
-                        <div class="form__wrapper">
-                            <div class="form__item">
-                                <input class="form__input input" type="text" placeholder="Full Name">
-                                <svg class="form__icon icon">
-                                    <use xlink:href="svg/sprite.svg#user"/>
-                                </svg>
-                            </div>
-                            <div class="form__item form__item_mail">
-                                <input class="form__input input" type="email" placeholder="Email Address">
-                                <svg class="form__icon icon">
-                                    <use xlink:href="svg/sprite.svg#mail"/>
-                                </svg>
-                            </div>
-                            <div class="form__item form__item_lite">
-                                <input class="form__input form__input_submit" type="submit" value="Subscribe now"> 
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                <form class="newsletter__form form" action="#" method="POST">
+                    <div class="form__item form__item_middle input input_bordered ">
+                        <input class="input__field" type="text" placeholder="Full Name">
+                        <svg class="input__icon icon">
+                            <use xlink:href="svg/sprite.svg#user"/>
+                        </svg>
+                    </div>
+                    <div class="form__item form__item_bigger input input_bordered">
+                        <input class="input__field " type="email" placeholder="Email Address">
+                        <svg class="input__icon icon">
+                            <use xlink:href="svg/sprite.svg#mail"/>
+                        </svg>
+                    </div>
+                    <div class="form__item form__item_centered form__item_little input">
+                        <input class="input__field input__field_submit" type="submit" value="Subscribe now"> 
+                    </div>
+                </form>
                 <div class="newsletter__location">
                     <div class="location">
                         <div class="location__background">
