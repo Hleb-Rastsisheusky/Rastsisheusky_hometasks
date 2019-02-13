@@ -489,19 +489,23 @@ body {
 }
 
 .service {
+    $self:&;
+
     position: relative;
     padding-left: 82px;
     padding-right: get_vw_size(77);
+
+    &:hover {
+        #{$self}__icon{
+            fill: $icon_active_color; 
+        }
+    }
 
     &__icon {
         fill: $icon_color;
         position: absolute;
         top: 0;
         left:0;
-
-        &:hover {
-            fill: $icon_active_color; 
-        }
     }
 
     &__heading {
@@ -755,6 +759,44 @@ body {
         padding-bottom: get_vw_size(72);
     }
 
+    &__steps {
+        display: flex;
+        padding: 0 get_vw_size(28);
+
+            &:first-child {
+                margin-left: -15px;
+            }
+
+            &:last-child {
+                margin-right: -15px;
+            }
+    }
+
+    &__step {
+        position: relative;
+
+        &:nth-child(2n)::before,
+        &:nth-child(2n + 3)::before {
+            position: absolute;
+            left: 0;
+            content: '';
+            width: get_vw_size(128);
+            height: get_vw_size(32);
+            background: url(./../image/arrow.png) no-repeat;
+            background-size: contain;
+        }
+
+        &:nth-child(2n)::before {
+            top:0;
+            transform: translateX(-50%);
+        }
+
+        &:nth-child(2n + 3)::before {
+            top:50%;
+            transform: translateX(-50%) scale(1, -1);
+        }
+    }
+
     &__link {
         display:block;
         text-align: center;
@@ -762,110 +804,68 @@ body {
 
     &__button {
         padding: 17px 27px;
-    }
-}
-
-.steps {
-    &__box {
-        display: flex;
-        align-items: center;
-        padding-bottom: get_vw_size(91);
+        margin-top: get_vw_size(91);
     }
 
-    @include scale(940) {
-        &__box {
+    @include scale(768) {
+        &__steps {
             flex-wrap: wrap;
+        }
+
+        &__step {
+            max-width: 50%;
+            margin-bottom: 20px;
+
+            &::before {
+                display: none;
+            }
         }
     }
 }
 
 .step {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+    $self:&;
+    text-align: center;
+    padding: 0 get_vw_size(43);
 
-    &:not(:first-child):not(:last-child) {
-        padding-left: 44px;
-        padding-right: 44px;
+    &:hover {
+        #{$self}__icon {
+            fill: $icon_active_color;
+        }
     }
 
-    &:first-child {
-        padding-left: 28px;
-        padding-right: 44px;
+    &:first-of-type {
+        padding-left: 0;
     }
 
-    &:last-child {
-        padding-left: 44px;
-        padding-right: 28px;
+    &:last-of-type {
+        padding-right: 0;
     }
 
     &__icon {
-        fill: $main_color_blue;
-        margin: get_vw_size(40) get_vw_size(75) get_vw_size(102);
+        fill: $icon_color;
+
+        &-wrapper {
+            display: inline-flex;
+            padding: get_vw_size(50);
+            border-radius: 50%;
+            border: 1px solid transparent;
+            margin-bottom: get_vw_size(62);
+
+        }
     }
 
     &__heading {
-        text-align: center;
-        padding-bottom: 28px;
-        font: get_rem(20px)/1 $lato-bold;
+        font: get_rem(15px)/1 $lato_bold;
         text-transform: uppercase;
+        margin-bottom: 28px;
     }
 
     &__description {
-        font: get_rem(13px)/get_rem(22px) $open-sans;
+        font: get_rem(13px)/1.5 $open-sans;
         color: $gray_description_color;
-        text-align: center;
-    }
-
-    @include scale(940) {
-        max-width: 50%;
-
-        &:nth-child(n+3) {
-            margin-top: 20px;
-        }
-    }
-
-    @include scale(540) {
-        max-width: 100%;
     }
 }
-
-.top-arrow {
-    &:after {
-        content: url(./../image/arrow_1.png);
-        position: absolute;
-        right: -50%;
-        transform: translateX(-70%);
-
-        @include scale(1200) {
-            transform: translateX(-45%);
-        } 
-
-        @include scale (940) {
-            display: none;
-        }
-    }
-}
-
-.bottom-arrow {
-    &:after {
-        content: url(./../image/arrow_2.png);
-        position: absolute;
-        bottom:50%;
-        right: -50%;
-        transform: translateX(-70%);
-
-        @include scale(1200) {
-            transform: translateX(-50%);
-        } 
-
-        @include scale (940) {
-            display: none;
-        }
-    }
-}
-
 
 // Testimonials 
 
