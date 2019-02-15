@@ -1,0 +1,23 @@
+@mixin  scale($width, $diff: 'less') {
+    $behaviour: max-width;
+    $screen-width: $width;
+
+    @if ($diff  ==  'less') {
+        $screen-width: $width - 1;
+    }
+    @if ($diff == 'self above') {
+        $behaviour: min-width;
+    }
+
+    @media screen and (#{$behaviour} : #{$screen-width}px) {
+        @content;
+    }
+}
+
+@mixin pseudo_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 94%;
+    height: 100%;
+}

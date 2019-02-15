@@ -1,0 +1,57 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
+
+
+* {
+    margin:0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font: $main_size $centro;
+}
+
+.link {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.icon {
+    fill: inherit;
+    stroke: inherit;
+    stroke-width: inherit;
+    width: 13px;
+    height: 13px;
+
+    &_l {
+        width: 22px;
+        height: 22px;
+    }
+
+    &_xl {
+        width: 39px;
+        height: 39px;
+    }
+}
+
+@import "./header.scss";
+
+
+
