@@ -4,8 +4,7 @@ header.page-header
             .page-header__logo
                 .logo 
                 span.logo__text Daisy
-            nav.page-header__nav.uppercase.menu
-                .js-close
+            nav.page-header__nav.nav.uppercase
                 ul.nav-menu
                     li.nav-menu__item
                         a.nav-menu__link.link(href="#") About
@@ -15,19 +14,25 @@ header.page-header
                         a.nav-menu__link.link(href="#")  Services
                     li.nav-menu__item
                         a.nav-menu__link.link(href="#") Contact
-            .burger.js-open
+            .burger
+                .burger-toggle
         main.page-header__heading
-            .heading.heading_main
+            .heading_main
                 .heading__title.uppercase
                     span.heading_active Clients 
                     | in your business
-                .heading__subtitle Your clients on the internet. Learn how to receive them.
-        .page-header__order-wrapper
-            .page-header__order 
+                .heading__subtitle  Your clients on the internet. Learn how to receive them.
+        .page-header__button-wrapper
+            .page-header__button 
                 a.page-header__link.link I want clients
             svg.page-header__icon.icon_xl
-                    use(xlink:href="svg/sprite.svg#mouse")
-            .cursive   
+                use(xlink:href="svg/sprite.svg#mouse")
+            .cursive 
+        .page-header__scroll
+            .button-scroll_active
+                svg.button-scroll__icon.icon
+                    use(xlink:href="svg/sprite.svg#arrow-down")
+
              
                 
         

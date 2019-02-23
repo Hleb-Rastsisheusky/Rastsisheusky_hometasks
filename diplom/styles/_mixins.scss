@@ -14,10 +14,40 @@
     }
 }
 
-@mixin pseudo_div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 94%;
-    height: 100%;
+@mixin pseudo_background_anim {
+    content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./../img/header_background.jpg) no-repeat;
+        background-size: cover;
+        z-index: -10;
+        animation: anim 25s linear infinite;
 }
+
+@mixin button_scroll {
+    width: 28px;
+    height: 28px;
+    border: 1px solid $decorate_color;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+@mixin hexagon_pseudo {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $hexagon_icon_border_color;
+	transition: background-color .25s;
+}
+
+
+

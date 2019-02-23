@@ -1,0 +1,172 @@
+.benefits {
+    &__wrapper {
+        text-align: center;
+        padding-top: get_vw_size(67);
+        padding-bottom: 15px;
+    }
+
+    &__heading {
+        margin-bottom: get_vw_size(115);
+    }
+
+    &__items {
+		display: flex;
+		align-items: center;
+		
+		@include scale(760) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		@include scale(760) {
+			width: 40%;
+			margin: 20px 0;
+		}
+
+		@include scale(460) {
+			width: 100%;
+		}
+	}
+	
+	
+}
+
+.item {
+    $self: &;
+    
+    text-align: center;
+	margin-right: 40px;
+
+	@include scale(460) {
+		margin-right: 0;
+	} 
+
+    &:last-child {
+        margin-right: 0;
+	}
+	
+	&__title {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font: get_rem(20px)/1 $encore;
+		color: $heading_color;
+		margin-bottom: 34px;
+
+		&:after {
+			content:'';
+			display: block;
+			width: 48px;
+			height: 1px;
+			position: absolute;
+			bottom: -11px;
+			background-color: $heading_color;
+		}
+	}
+
+	&__info {
+		font: get_rem(15px)/get_rem(18px) $encore_thin;
+		color: $subtitle_color;
+		margin-bottom: get_vw_size(51);
+	}
+}
+
+
+//  Hexagon
+
+
+.hexagon {
+	margin: 0 auto 54px;
+	
+	&__icon {
+		fill: #fff;
+		transition: background-color .35s;
+	}
+}
+
+.hexagon,
+.hexagon__item_inner {
+    position: relative;
+    width: 91px;
+	height: 52px;
+	background-color: $hexagon_icon_border_color;
+	transition: background-color .35s;
+}
+
+.hexagon:before,
+.hexagon:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: $hexagon_icon_border_color;
+	transition: background-color .35s;
+}
+
+.hexagon:before,
+.hexagon__item_inner:before{
+	transform: rotate(120deg);
+}
+
+.hexagon:after,
+.hexagon__item_inner:after{
+	transform: rotate(60deg);
+}
+
+.hexagon__item_inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform: scale(.9);
+	background-color: $decorate_color;
+	z-index: 1;
+}
+
+.hexagon__item_inner:before,
+.hexagon__item_inner:after {    
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: background-color .35s;
+	background-color: $decorate_color;
+}
+
+.hexagon__content {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.hexagon:hover,
+.hexagon:hover:before,
+.hexagon:hover:after {
+	background-color: $decorate_color;
+}
+
+.hexagon:hover .hexagon__item_inner,
+.hexagon:hover .hexagon__item_inner:before,
+.hexagon:hover .hexagon__item_inner:after {
+	background-color: #fff;
+}
+
+.hexagon:hover .hexagon__icon {
+	fill: $decorate_color;
+}
+
+
+
+
+
+
+

@@ -12,7 +12,8 @@
 }
 
 body {
-    font: $main_size $centro;
+    font: $main_size $encore;
+    box-sizing: border-box;
 }
 
 .link {
@@ -37,8 +38,8 @@ li {
     fill: inherit;
     stroke: inherit;
     stroke-width: inherit;
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
 
     &_l {
         width: 22px;
@@ -51,7 +52,54 @@ li {
     }
 }
 
+.button-scroll {
+    $self: &;
+
+    &_transparent {
+        @include button_scroll;
+
+        #{$self}__icon {
+            cursor: pointer;
+            fill: $decorate_color;
+        }
+
+        &:hover {
+            background: $decorate_color;
+            transition: all 0.45s;
+
+            #{$self}__icon {
+                fill: #fff;
+            }
+        }
+    }
+
+   
+
+    &_active {
+        @include button_scroll;
+        background: $decorate_color;
+    
+        #{$self}__icon {
+            cursor: pointer;
+            fill: #fff;
+        }
+
+        &:hover {
+            background: #fff;
+            border-color: transparent;
+            transition: all 0.45s;
+
+            #{$self}__icon {
+                fill: $decorate_color;
+            }
+        }
+    }
+}
+
+
 @import "./header.scss";
+@import "./benefits.scss";
+@import "./expand.scss";
 
 
 

@@ -1,12 +1,16 @@
-(function($) {
+(function () {
 
-$('.js-open').on('click', function(){
-    $('.menu').addClass('mob-menu');
-    $('.js-close').addClass('close');
-})
-$('.js-close').on('click', function(){
-    $('.menu').removeClass('mob-menu');
-    $('.close').removeClass('close');
-})
+    var burger = {
+        navToggle: document.querySelector('.burger'),
+        nav: document.querySelector('nav'),
 
-})(jQuery);
+        doToggle: function(e) {
+            e.preventDefault();
+            this.navToggle.classList.toggle('opened');
+            this.nav.classList.toggle('opened');
+        }
+    };
+
+    burger.navToggle.addEventListener('click', function(e) { burger.doToggle(e); });
+    burger.nav.addEventListener('click', function(e) { burger.doToggle(e); });
+}());

@@ -1,0 +1,58 @@
+.expand {
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        @include pseudo_background_anim;
+        background: url(./../img/business_background.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    &__wrapper {
+        padding: get_vw_size(91) get_vw_size(160) 20px get_vw_size(160);
+    }
+
+    &__heading {
+        margin-bottom: get_vw_size(51);
+        text-align: center;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: get_vw_size(115) get_vw_size(130) get_vw_size(100) get_vw_size(130);
+        border: 8px solid rgba(255,255,255,0.3);
+    }
+
+    &__link {
+        display: block;
+        background-color: inherit;
+        border: 2px solid $decorate_color;
+        border-radius: 10px;
+        padding: 20px 65px;
+        color: $decorate_color;
+        font: get_rem(24px)/1 $encore_light;
+        letter-spacing: -0.12px;
+        position: relative;
+        margin: 0 auto;
+        cursor: pointer;
+        transition: 0.4s linear;
+
+        &:hover {
+            color:#fff;
+            background: $decorate_color;
+        }
+
+        @include scale(760) {
+            padding: 20px 40px;
+        }
+    }
+
+    &__scroll {
+        margin-top: get_vw_size(53);
+    }
+}
+
+
