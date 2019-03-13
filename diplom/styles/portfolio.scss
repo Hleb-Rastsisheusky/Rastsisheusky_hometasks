@@ -1,0 +1,88 @@
+.portfolio  {
+    padding: get_vw_size(80) 0 17px 0;
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__heading {
+        margin-bottom: 52px;
+    }
+
+    &__image {
+        max-height: 196px;
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__column {
+        max-width: 50%;
+
+        @include scale(480) {
+            max-width: 100%;        
+        }
+
+        &-item {
+            display: flex;
+            flex-wrap: wrap;
+            margin: -5px; 
+
+            @include scale(1024) {
+                flex-direction: column;
+                margin: 0;
+            }
+        }
+
+        &-content {
+            display: inline-flex;
+            margin: 5px;
+
+            @include scale(1024) {
+                padding: 6px;
+                margin: 0;
+            }
+        }
+    }
+
+    &__button {
+        margin-top: 59px;
+        margin-bottom: 25px;
+    }
+}
+
+.portfolio {
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        align-content: stretch;
+        padding: 20px 15px;
+        border-top: 1px solid $subtitle_color;
+        border-bottom: 1px solid $subtitle_color;
+        margin-bottom: 46px;
+
+        @include scale(768) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding-bottom: 0;
+        }
+
+        &__item {
+            &:not(:last-child):after {
+                content: '/';
+                display: inline-block;
+                padding-left: get_vw_size(65);
+                padding-right: get_vw_size(65);
+            }
+
+            @include scale(768) {
+                padding-bottom: 20px;
+             }
+        }
+
+        &__link {
+            color: $decorate_color;
+        }
+    }
+}

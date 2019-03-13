@@ -1,0 +1,17 @@
+.page-footer {
+
+    &__item {
+        display: flex;
+        align-items: center;
+        max-width: 100%;
+        min-height: get_vw_size(210);
+        background: url(./../img/footer.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+    }
+}

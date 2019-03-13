@@ -1,0 +1,13 @@
+.location {
+
+    &__wrapper {
+        position: relative;
+    }
+
+    &__address {
+        position: absolute;
+        top:0;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}

@@ -13,13 +13,13 @@
 		display: flex;
 		align-items: center;
 		
-		@include scale(760) {
+		@include scale(768) {
 			flex-wrap: wrap;
 		}
 	}
 
 	&__item {
-		@include scale(760) {
+		@include scale(768) {
 			width: 40%;
 			margin: 20px 0;
 		}
@@ -79,6 +79,16 @@
 
 .hexagon {
 	margin: 0 auto 54px;
+	&__address {
+		margin-top: 18px;
+		font: get_rem(14px)/get_rem(18px) $encore_thin;
+		letter-spacing: -0.07px;
+		padding: 0 10px;
+
+		&:hover {
+			color: $decorate_color;
+		}
+	}
 	
 	&__icon {
 		fill: #fff;
@@ -94,6 +104,25 @@
 	background-color: $hexagon_icon_border_color;
 	transition: background-color .35s;
 }
+
+.hexagon_l,
+.hexagon__item_inner_l {
+    position: relative;
+    width: 68px;
+	height: 38px;
+	background-color: $hexagon_icon_border_color;
+	transition: background-color .35s;
+}
+
+.hexagon_xl,
+.hexagon__item_inner_xl {
+    position: relative;
+    width: 189px;
+	height: 109px;
+	background-color: $hexagon_icon_border_color;
+	transition: background-color .35s;
+}
+
 
 .hexagon:before,
 .hexagon:after {
@@ -140,13 +169,22 @@
 
 .hexagon__content {
 	position: relative;
+	text-align: center;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
 	z-index: 1;
+	font: get_rem(26px)/1 $encore;
+	color: white;
+
+	&:hover {
+		color: $decorate_color;
+	}
 }
+
 
 .hexagon:hover,
 .hexagon:hover:before,

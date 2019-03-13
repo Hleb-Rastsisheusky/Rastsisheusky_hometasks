@@ -1,0 +1,37 @@
+section.portfolio 
+     .portfolio__wrapper.container
+        .portfolio__heading.heading_usual
+            .heading__title.uppercase Portfolio 
+        ul.portfolio-menu.uppercase
+            li.portfolio-menu__item
+                a.portfolio-menu__link.link(href="#") All
+            li.portfolio-menu__item
+                a.portfolio-menu__link.link(href="#") entertainment 
+            li.portfolio-menu__item
+                a.portfolio-menu__link.link(href="#")  sport 
+            li.portfolio-menu__item
+                a.portfolio-menu__link.link(href="#") business   
+            li.portfolio-menu__item
+                a.portfolio-menu__link.link(href="#") building
+        .portfolio__image-wrapper
+            .portfolio__column
+                article.portfolio__column-item
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_1.jpg", alt="")
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_4.jpg", alt="")
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_5.jpg", alt="")
+            .portfolio__column
+                article.portfolio__column-item
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_2.jpg", alt="")
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_3.jpg", alt="")
+                    .portfolio__column-content
+                        img.portfolio__image(src="./../../img/portfolio_6.jpg", alt="")
+        .portfolio__button.button_m I want landing page
+        .portfolio__scroll 
+            .button-scroll_transparent
+                svg.button-scroll__icon.icon
+                    use(xlink:href="svg/sprite.svg#arrow-down")

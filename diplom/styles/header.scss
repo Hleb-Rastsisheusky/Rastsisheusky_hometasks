@@ -104,15 +104,30 @@
 
 .logo {
     background: url(../img/logo_header.png) no-repeat;
+    background-size: cover;
     max-width: 59px;
     min-width: 59px;
     min-height: 68px;
+
+    &_down {
+        background: url(../img/logo_header.png) no-repeat;
+        background-size: cover;
+        max-width: 78px;
+        min-width: 78px;
+        min-height: 90px;
+    }
     
 
     &__text {
         font: get_rem(24px)/1 $gotham_bold;
         color: #fff;
         margin-left: 16px;
+
+        &_down {
+            font: get_rem(32px)/1 $gotham_bold;
+            color: #fff;
+            margin-left: 16px;
+        }
     }
 }
 
@@ -270,12 +285,12 @@
     
         #{$self}__subtitle {
             display: inline-block;
-            font: get_rem(19px)/get_rem(26px) $encore_light;
+            font: get_rem(18px)/get_rem(26px) $encore_thin;
             letter-spacing: -0.1px;
             color: $subtitle_color;
             margin-top: 32px;
-            margin-left: get_vw_size(218);
-            margin-right: get_vw_size(218);
+            margin-left: get_vw_size(220);
+            margin-right: get_vw_size(220);
         }
     }
     

@@ -1,0 +1,56 @@
+.team {
+    background-color: $section_background_color;
+    padding: get_vw_size(54) 0 12px 0;
+    text-align: center;
+
+    &__heading {
+        margin-bottom: get_vw_size(86);
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include scale(820) {
+            flex-direction: column;
+        }
+    }
+}
+
+.card {
+    padding: 0 20px;
+    width: 33%;
+    margin-bottom: get_vw_size(71);
+
+    &__avatar {
+        width: 147px;
+        height: 170px;
+        margin: 0 auto;
+        margin-bottom: 25px;
+    }
+
+    &__info {
+        font: get_rem(28px)/get_rem(28px) $encore;
+        color: $heading_color;
+        margin-bottom: 14px;
+
+        &_active {
+            color: $decorate_color;
+        }
+    }
+
+    &__prof {
+        font: get_rem(19px)/1 $encore_thin;
+        color: $heading_color;
+        margin-bottom: 16px;
+    }
+
+    &__icon {
+        fill: $heading_color;
+    }
+
+    @include scale(820) {
+        width: 100%;
+    }
+}
