@@ -1,4 +1,113 @@
 .teamMore {
-    padding-top: 80px;
+    padding-top: get_vw_size(80);
     padding-bottom: 165px;
+
+    @include scale(768) {
+        padding-top: 40px;
+        padding-bottom: 130px;
+    }
+}
+
+.slider {
+    margin-top: get_vw_size(96);
+    position: relative;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        
+        @include scale(1024) {
+            flex-direction: column;
+        }
+    }
+
+    &__desc {
+        max-width: 34%;
+        font: get_rem(15px)/get_rem(21px) $encore_thin;
+        color: $section_text_color;
+        letter-spacing: -0.07px;
+
+        @include scale(1024) {
+            max-width: 50%;
+        }
+
+        @include scale(470) {
+            max-width: 100%;
+        }
+    }
+
+    &__avatar {
+        min-width: 160px;
+        min-height: 185px;
+        margin: 0 71px;
+
+        @include scale(1024) {
+           margin: 15px 0;
+        }
+    }
+
+    &__author {
+        position: relative;
+        max-width: 34%;
+        display: flex;
+        flex-direction: column;
+
+        @include scale(1024) {
+            max-width: 50%;
+            align-items: center;
+        }
+
+        @include scale(470) {
+            max-width: 100%;
+        }
+    }
+
+    &__name {
+        display: inline-block;
+        font: get_rem(28px)/get_rem(28px) $encore;
+        color: $heading_color;
+        margin-bottom: 25px;
+
+        &_active {
+            color: $decorate_color;
+        }
+    }
+
+    &__from {
+        font: get_rem(18px)/1 $encore_light;
+        color: $section_from_color;
+    }
+
+    &__dots {
+        display: none;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 52px;
+
+        @include scale(768) {
+            margin-top: 25px;
+        }
+    }
+
+    &__arrow {
+        @include button_scroll;
+        margin: 0 13px;
+
+        &:hover {
+            background: $decorate_color;
+            transition: all 0.45s;
+        }
+
+        &-icon {
+            fill: $decorate_color;
+            cursor: pointer;
+
+            &:hover {
+                fill: #fff;
+            }
+        }
+    }
 }

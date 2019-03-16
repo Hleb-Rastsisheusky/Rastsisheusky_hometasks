@@ -36,8 +36,15 @@
         }
 
         &-content {
+            position: relative;
             display: inline-flex;
             margin: 5px;
+
+            &:hover .invisible,
+            &:hover .invisible__content {
+                display: block;
+                cursor: pointer;
+            }
 
             @include scale(1024) {
                 padding: 6px;
@@ -50,9 +57,7 @@
         margin-top: 59px;
         margin-bottom: 25px;
     }
-}
 
-.portfolio {
     &-menu {
         display: flex;
         justify-content: space-between;
@@ -83,6 +88,45 @@
 
         &__link {
             color: $decorate_color;
+        }
+    }
+}
+
+.invisible,
+.invisible__content {
+    display: none;
+    position: absolute;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+}
+
+.invisible {
+    background: $decorate_color;
+    opacity: .78;
+
+    &__content {
+        padding: 25px 25px;
+        text-align: left;
+        font: get_rem(28px)/1 $encore_bold;
+        color: #fff;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            height: 11px;
+            width: 46px;
+            background: #fff;
+            top: 50%;
+            right: 50%;
+        }
+
+        &:before {
+            transform: translateX(50%);
+        }
+
+        &:after {
+            transform: translateX(50%) rotate(90deg);
         }
     }
 }

@@ -5,3 +5,48 @@ section.teamMore
             .hexagon__content
                svg.hexagon__icon.icon_xl
                     use(xlink:href='svg/sprite.svg#quotes')
+        .slider
+            .slider__item
+                .slider__desc   This is Photoshop's version  of Lorem Ipsum. 
+                    |   Proin gravida nibh vel velit auctor aliquet. Aenean 
+                    |   sollicitudin,  bibendum auctor, elit 
+                .slider__avatar
+                    img(src="./../../img/team_4.png", alt="photo")
+                .slider__author
+                    .slider__name
+                        span.slider__name_active Alan 
+                        |   Richman 
+                    .slider__from CEO of Romashka
+            .slider__item
+                .slider__desc   Lorem ipsum dolor sit, amet consectetur 
+                    |   adipisicing elit. Reprehenderit laborum facilis 
+                    |   ut ab, fugiat laboriosam nemo eveniet conseq
+                .slider__avatar
+                    img(src="./../../img/team_1.png", alt="photo")
+                .slider__author
+                    .slider__name
+                        span.slider__name_active Tomothy 
+                        |   Bowman  
+                    .slider__from Marketing of Italy
+            .slider__item
+                .slider__desc   Lorem ipsum dolor, sit amet consec letur
+                    |   tetur adipisicing elit. Quia, ationem ipsun lorem
+                    |   quas olado proma andae ipsam officia cupiditate! 
+                .slider__avatar
+                    img(src="./../../img/team_2.png", alt="photo")
+                .slider__author
+                    .slider__name
+                        span.slider__name_active Steve 
+                        |   Tracy 
+                    .slider__from CEO of America
+            .slider__buttons
+                a(onclick="plusSlides(-1)").slider__arrow.prev
+                    svg.slider__arrow-icon.icon
+                        use(xlink:href="svg/sprite.svg#arrow-back")
+                a(onclick="plusSlides(1)").slider__arrow.next
+                    svg.slider__arrow-icon.icon
+                        use(xlink:href="svg/sprite.svg#arrow-next")
+            .slider__dots
+                span.dot(onclick="currentSlide(1)")
+                span.dot(onclick="currentSlide(2)")
+                span.dot(onclick="currentSlide(3)")

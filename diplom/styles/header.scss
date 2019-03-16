@@ -19,7 +19,7 @@
     &__logo {
         display: flex;
         align-items: center;
-        z-index: 3;
+        
     }
 
     &__nav {
@@ -144,6 +144,7 @@
         font: get_rem(16px)/1 $encore_thin;
         color: #fff;
         transition: all 0.45s;
+        cursor: pointer;
 
         &:after {
             content:'';
