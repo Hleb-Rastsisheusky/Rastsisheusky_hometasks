@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
 .product {
     background-color: $section_background_color;
     padding-top: get_vw_size(60);

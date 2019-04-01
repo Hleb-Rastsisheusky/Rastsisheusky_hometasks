@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
 .team {
     background-color: $section_background_color;
     padding: get_vw_size(54) 0 12px 0;

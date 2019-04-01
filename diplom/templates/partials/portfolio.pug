@@ -2,47 +2,37 @@ section.portfolio
      .portfolio__wrapper.container
         .portfolio__heading.heading_usual
             .heading__title.uppercase Portfolio 
-        ul.portfolio-menu.uppercase
-            li.portfolio-menu__item
-                a.portfolio-menu__link.link(href="#") All
-            li.portfolio-menu__item
-                a.portfolio-menu__link.link(href="#") entertainment 
-            li.portfolio-menu__item
-                a.portfolio-menu__link.link(href="#")  sport 
-            li.portfolio-menu__item
-                a.portfolio-menu__link.link(href="#") business   
-            li.portfolio-menu__item
-                a.portfolio-menu__link.link(href="#") building
-        .portfolio__image-wrapper
-            .portfolio__column
-                article.portfolio__column-item
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_1.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase mountain bikes
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_4.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase Boxes
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_5.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase Magazines
-            .portfolio__column
-                article.portfolio__column-item
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_2.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase Paints
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_3.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase Bus
-                    .portfolio__column-content
-                        img.portfolio__image(src="./../../img/portfolio_6.jpg", alt="image")
-                        .invisible
-                            .invisible__content.uppercase Cars
-                    .mover
+        .portfolio-menu.uppercase(id="myBtnContainer")
+            span.portfolio-menu__item.btn.active(data-filter-target="all") all
+            span.portfolio-menu__item.btn(data-filter-target="entertainment") entertainment  
+            span.portfolio-menu__item.btn(data-filter-target="sport") sport
+            span.portfolio-menu__item.btn(data-filter-target="business") business
+            span.portfolio-menu__item.btn(data-filter-target="building") building
+        .portfolio__content
+            .portfolio__item.portfolio__item_big(data-filter="sport")
+                img.portfolio__image.sport(src="./../../img/portfolio_1.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase mountain bikes
+            .portfolio__item.portfolio__item_small(data-filter="entertainment")
+                img.portfolio__image.entertainment(src="./../../img/portfolio_2.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase Paints
+            .portfolio__item.portfolio__item_small(data-filter="building")
+                img.portfolio__image.business(src="./../../img/portfolio_3.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase Bus
+            .portfolio__item.portfolio__item_small(data-filter="building")
+                img.portfolio__image.entertainment(src="./../../img/portfolio_4.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase Boxes
+            .portfolio__item.portfolio__item_small(data-filter="business")
+                img.portfolio__image.business(src="./../../img/portfolio_5.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase Magazines
+            .portfolio__item.portfolio__item_big(data-filter="sport")
+                img.portfolio__image.sport(src="./../../img/portfolio_6.jpg", alt="image")
+                .invisible
+                    .invisible__content.uppercase Cars
         .portfolio__button.button_m I want landing page
         .portfolio__scroll 
             .button-scroll_transparent

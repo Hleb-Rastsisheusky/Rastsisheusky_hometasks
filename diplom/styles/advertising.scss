@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
 .advertising {
     padding: get_vw_size(134) 0 17px 0;
 

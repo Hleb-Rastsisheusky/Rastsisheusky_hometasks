@@ -1,3 +1,8 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
 .page-header {
     position: relative;
     overflow: hidden;
@@ -31,7 +36,7 @@
             width: 100%;
             top: -500px;
             padding: 60px 0;
-            z-index: 1;
+            z-index: 10;
             background-color: $heading_color;
             transition: all 1s ease;
             transform: scaleY(0);
@@ -224,7 +229,7 @@
     }
 
     @include scale(768) {
-        z-index: 1;
+        z-index: 10;
     }
 
     &-toggle{

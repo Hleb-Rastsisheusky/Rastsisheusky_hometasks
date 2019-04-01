@@ -1,15 +1,31 @@
+@import "./variables";
+@import "./fonts";
+@import "./functions";
+@import "./mixins";
+
 .teamMore {
     padding-top: get_vw_size(80);
-    padding-bottom: 165px;
+    
+    &__wrapper {
+        position: relative;
+    }
+
+    &__address {
+        position: absolute;
+        bottom:0;
+        right: 50%;
+        transform: translate(50%, 100%);
+        z-index: 5;
+    }
 
     @include scale(768) {
         padding-top: 40px;
-        padding-bottom: 130px;
     }
 }
 
 .slider {
     margin-top: get_vw_size(96);
+    padding-bottom: 165px;
     position: relative;
 
     &__item {

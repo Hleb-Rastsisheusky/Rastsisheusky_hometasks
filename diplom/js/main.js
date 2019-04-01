@@ -56,3 +56,33 @@ function showSlides(n) {
 
 }
 
+// image gallery
+
+
+function itemsFilter(e) {
+    var selectedFilter = e.target.dataset.filterTarget;
+    
+   if(selectedFilter == 'all') {
+     portfolio__item.forEach(function(item) {
+       item.classList.remove('category_hide');
+     });
+     
+   } else {
+     portfolio__item.forEach(function(item) {
+       item.classList.remove('category_hide');
+     });
+     
+     var filteredItems = document.querySelectorAll('.portfolio__item:not([data-filter="' + selectedFilter + '"])');
+     
+     filteredItems.forEach(function(item) {
+       item.classList.add('category_hide');
+     })
+   }
+    
+  }
+  
+  var portfolio__item = document.querySelectorAll('.portfolio__item');
+  
+  var filterButtons = document.querySelector('#myBtnContainer');
+  
+  filterButtons.addEventListener('click', itemsFilter);
